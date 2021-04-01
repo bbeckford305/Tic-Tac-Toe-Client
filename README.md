@@ -32,13 +32,13 @@
     <h3>Laptop Wireframe</h3>
     <br>
       <p>
-        <img href="https://imgur.com/a/Mpjt4Gg" alt="Laptop wireframe" style="max-width:100%;">
+        <img src="Images\1920-1080.jpg" alt="Laptop wireframe" style="max-width:100%;">
       </p>
     <br>
     <h3>Phone Wireframe</h3>
     <br>
       <p>
-        <img href="https://imgur.com/a/u09Bpqd" alt="Phone wireframe" style="max-width:100%;">
+        <img src="Images\iPhone 12 Pro Max – 1.jpg" alt="Phone wireframe" style="max-width:100%;">
       </p>
   </body>
 </html>
