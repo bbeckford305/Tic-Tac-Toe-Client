@@ -32,13 +32,13 @@
     <h3>Laptop Wireframe</h3>
     <br>
       <p>
-        <img src="https://github.com/bbeckford305/Tic-Tac-Toe-Client/issues/2" alt="Laptop wireframe">
+        <img src="https://imgur.com/a/Mpjt4Gg" alt="Laptop wireframe" style="max-width:100%;">
       </p>
     <br>
     <h3>Phone Wireframe</h3>
     <br>
       <p>
-        <img src="https://github.com/bbeckford305/Tic-Tac-Toe-Client/issues/1" alt="phone wireframe">
+        <img src="https://imgur.com/a/u09Bpqd" alt="Phone wireframe" style="max-width:100%;">
       </p>
   </body>
 </html>
