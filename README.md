@@ -14,9 +14,7 @@ Play one of the oldest games still played today. You will be given the choice of
 
 * As a user I want to be able to sign in or sign up
 * As a user I want to be able to start a new game
-* As a user I want to be able to play as either X or O
 * As a user I want to be able to restart my game while playing
-* As a usaer I want to know how many games I have won and lost
 * As a user I want to be able to sign out when done playing
 
 
