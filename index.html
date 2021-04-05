@@ -16,7 +16,7 @@
       <h2>The ancient game of X's and O's</h2>
 
       <p id="message"></p>
-  <!--Sign Up Button-->
+      <!--Sign Up Button-->
       <p id="signupForm">Register To Play</p>
       <form id="sign-up">
         <input name="credentials[email]" type="email" placeholder="email" required>
@@ -25,7 +25,7 @@
         <input type="submit" value="Sign Up"/>
       </form>
 
-        <!-- Sign In Button-->
+      <!-- Sign In Button-->
       <p id="signinForm">Login To Play</p>
       <form id="sign-in">
         <input name="credentials[email]" type="email" placeholder="email" required>
@@ -42,10 +42,43 @@
       </form>
 
       <!--Sign out Button-->
-      <div id="signoutButton">
-         <input type="button" value="Sign Out"/>
+      <button id="signoutButton">Sign Out</button>
+
+      <!--New Game Button-->
+      <button id="newGameButton">New Game</button>
+
+      <!--Tic Tac Toe Button-->
+      <button id="tictactoeButton">TIC</button>
+
+      <section class='container'>
+
+        <div class='row h-100 board'>
+          <div class='col-4 box' data-cell-index='0'></div>
+          <div class='col-4 box' data-cell-index='1'></div>
+          <div class='col-4 box' data-cell-index='2'></div>
+
+          <div class='col-4 box' data-cell-index='3'></div>
+          <div class='col-4 box' data-cell-index='4'></div>
+          <div class='col-4 box' data-cell-index='5'></div>
+
+          <div class='col-4 box' data-cell-index='6'></div>
+          <div class='col-4 box' data-cell-index='7'></div>
+          <div class='col-4 box' data-cell-index='8'></div>
       </div>
+<!--
+      <div data-cell-index='0'></div>
+      <div data-cell-index='1'></div>
+      <div data-cell-index='2'></div>
+      <div data-cell-index='3'></div>
+      <div data-cell-index='4'></div>
+      <div data-cell-index='5'></div>
+      <div data-cell-index='6'></div>
+      <div data-cell-index='7'></div>
+      <div data-cell-index='8'></div> -->
 
 
-    </body>
+    </section>
+
+
+  </body>
 </html>

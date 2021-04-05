@@ -9,6 +9,7 @@ const onSignUpSuccess = function () {
 
 const onSignUpFailure = function () {
   $('#message').text('Registration Failure')
+  $('#sign-up').trigger('reset')
 }
 
 const onSignInSuccess = function (response) {
@@ -22,10 +23,12 @@ const onSignInSuccess = function (response) {
   $('#signinForm').hide()
   $('#passwordChangeForm').show()
   $('#signoutButton').show()
+  $('#newGameButton').show()
 }
 
 const onSignInFailure = function () {
   $('#message').text('Email/Password Combination Incorrect')
+  $('#sign-in').trigger('reset')
 }
 
 const onChangePasswordSuccess = function () {
@@ -35,9 +38,11 @@ const onChangePasswordSuccess = function () {
 
 const onChangePasswordFailure = function () {
   $('#message').text('Password Change Failed')
+  $('#change-password').trigger('reset')
 }
 
 const onSignOutSuccess = function () {
+  store.user = null
   $('#message').text('You Have Been Signed Out')
   $('#change-password').hide()
   $('#sign-up').show()
@@ -46,6 +51,13 @@ const onSignOutSuccess = function () {
   $('#signinForm').show()
   $('#passwordChangeForm').hide()
   $('#signoutButton').hide()
+  $('#newGameButton').hide()
+  $('.container').hide()
+  $('#tictactoeButton').hide()
+}
+
+const onSignOutFailure = function () {
+  $('#message').text('Please Try Signing Out Again')
 }
 
 module.exports = {
@@ -55,5 +67,6 @@ module.exports = {
   onSignInFailure,
   onChangePasswordSuccess,
   onChangePasswordFailure,
-  onSignOutSuccess
+  onSignOutSuccess,
+  onSignOutFailure
 }

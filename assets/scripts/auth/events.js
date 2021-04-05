@@ -36,6 +36,7 @@ const onSignOut = function (event) {
   const playerInfo = getFormFields(form)
   api.signOut(playerInfo)
     .then(ui.onSignOutSuccess)
+    .catch(ui.onSignOutFailure)
 }
 
 module.exports = {

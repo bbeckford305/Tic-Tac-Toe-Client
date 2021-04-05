@@ -1,1 +1,82 @@
 @import '~bootstrap/scss/bootstrap';
+
+$rastaRed: rgb(255, 0, 0);
+$rastaGreen: rgb(0, 110, 0);
+$rastaYellow: rgb(255, 254, 37);
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+
+.container {
+height: 100vh;
+}
+
+.board {
+margin: auto;
+max-height: calc(100vh -75px);
+max-width: calc(100vh -75px;
+background: url(/Images/rasta-lion.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.box {
+border-right: 1px solid $black;
+border-bottom: 1px solid $black;
+
+&:nth-child(3n) {
+border-right: 0;
+background-color: $rastaRed;
+text-shadow: 3px 3px rgba(0, 110, 0, 1);
+}
+
+&:nth-child(3n+2) {
+background-color: $rastaYellow;
+text-shadow: 3px 3px rgba(255, 0, 0, 1);
+  }
+
+&:nth-child(3n+1) {
+background-color: $rastaGreen;
+text-shadow: 3px 3px rgba(255, 254, 37, 1);
+}
+
+&:nth-last-child(-1n + 3) {
+border-bottom: 0;
+}
+min-height: calc(100/3);
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+//
+// //would effect the letter color
+color: $black;
+//
+// //make the font larger
+ font-size: 20vh;
+
+//
+// //give text a shadow. the first 2 effect to the right. the second 2 effect below. rgba is the shadow color( the .25 determine the transparency)
+//text-shadow: 2px 2px rgba(0, 0, 0, 1);
+
+
+// //changes the color of the box when you hover over it
+&:hover {
+// //nth-child(3n+1): background-color: $rastaYellow;
+background-color: $black;
+// //
+// // //Would make our text not be selectable
+// user-select: none;
+}
+}
+
+// .tictactoeButton {
+//   margin: auto;
+//   max-height: calc(50vh -25px);
+//   max-width: calc(50vh -25px;
+//   postion: percentage($10);
+//   background
+// }
