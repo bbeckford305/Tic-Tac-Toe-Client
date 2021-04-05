@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,57 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Tic-Tac-Toe</h1>
+      <h2>The ancient game of X's and O's</h2>
+
+      <p id="message"></p>
+  <!--Sign Up Button-->
+      <p id="signupForm">Register To Play</p>
+        <form id="sign-up">
+          <input name="credentials[email]" type="email" placeholder="email" required>
+          <input name="credentials[password]" type="password" placeholder="password" required>
+          <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation" required>
+          <input type="submit" value="Sign Up"/>
+        </form>
+
+        <!-- Sign In Button-->
+      <p id="signinForm">Login To Play</p>
+        <form id="sign-in">
+          <input name="credentials[email]" type="email" placeholder="email" required>
+          <input name="credentials[password]" type="password" placeholder="password" required>
+          <input type="submit" value="Sign In"/>
+        </form>
+
+      <!--Change Password Button-->
+      <p id="passwordChangeForm">Change Your Password</p>
+        <form id="change-password">
+          <input name="password[old]" type="passwords" placeholder="current password" required>
+          <input name="password[new]" type="passwords" placeholder="new password" required>
+          <input type="submit" value="Change Password"/>
+        </form>
+
+      <!--Sign out Button-->
+      <button id="signoutButton">Sign Out</button>
+
+      <section class='container'>
+
+        <div class='row h-100 board>
+
+          <div class='col-4 box'></div>
+          <div class='col-4 box'></div>
+          <div class='col-4 box'></div>
+
+          <div class='col-4 box'></div>
+          <div class='col-4 box'></div>
+          <div class='col-4 box'></div>
+
+          <div class='col-4 box'></div>
+          <div class='col-4 box'></div>
+          <div class='col-4 box'></div>
+
+        </div>
+
+      </section>
+
     </body>
 </html>
