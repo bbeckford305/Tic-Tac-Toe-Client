@@ -25,4 +25,4 @@ Play one of the oldest games still played today. You will be given the choice of
 ### Phone Wireframe
 
 
-![Phone Wireframe](https://github.com/bbeckford305/Tic-Tac-Toe-Client/blob/practice/Images/iPhone%2012%20Pro%20Max%20%E2%80%93%201.jpg)
+![Phone Wireframe](https://github.com/bbeckford305/Tic-Tac-Toe-Client/blob/main/Images/iPhone%2012%20Pro%20Max%20%E2%80%93%201.jpg)
