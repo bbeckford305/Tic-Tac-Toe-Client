@@ -1,4 +1,3 @@
-
 'use strict'
 const getFormFields = require('./../../../lib/get-form-fields.js')
 const api = require('./api')
@@ -33,9 +32,9 @@ const onChangePassword = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  // const form = event.target
-  // const playerInfo = getFormFields(form)
-  api.signOut()
+  const form = event.target
+  const playerInfo = getFormFields(form)
+  api.signOut(playerInfo)
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
 }
