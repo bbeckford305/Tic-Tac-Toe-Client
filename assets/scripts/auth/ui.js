@@ -9,6 +9,7 @@ const onSignUpSuccess = function () {
 
 const onSignUpFailure = function () {
   $('#message').text('Registration Failure')
+  $('#sign-up').trigger('reset')
 }
 
 const onSignInSuccess = function (response) {
@@ -22,10 +23,12 @@ const onSignInSuccess = function (response) {
   $('#signinForm').hide()
   $('#passwordChangeForm').show()
   $('#signoutButton').show()
+  $('#newGameButton').show()
 }
 
 const onSignInFailure = function () {
   $('#message').text('Email/Password Combination Incorrect')
+  $('#sign-in').trigger('reset')
 }
 
 const onChangePasswordSuccess = function () {
@@ -35,6 +38,7 @@ const onChangePasswordSuccess = function () {
 
 const onChangePasswordFailure = function () {
   $('#message').text('Password Change Failed')
+  $('#change-password').trigger('reset')
 }
 
 const onSignOutSuccess = function () {
@@ -47,6 +51,9 @@ const onSignOutSuccess = function () {
   $('#signinForm').show()
   $('#passwordChangeForm').hide()
   $('#signoutButton').hide()
+  $('#newGameButton').hide()
+  $('.container').hide()
+  $('#tictactoeButton').hide()
 }
 
 const onSignOutFailure = function () {

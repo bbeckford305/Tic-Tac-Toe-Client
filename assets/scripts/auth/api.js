@@ -25,7 +25,7 @@ const changePassword = function (playerInfo) {
     url: config.apiUrl + '/change-password',
     data: playerInfo,
     headers: {
-      Authorization: 'Bearer' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
