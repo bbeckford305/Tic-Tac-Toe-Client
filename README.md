@@ -20,7 +20,7 @@ Play one of the oldest games still played today. You will be given the choice of
 
 ### Laptop Wireframe
 
-![Laptop Wireframe](https://github.com/bbeckford305/Tic-Tac-Toe-Client/blob/practice/Images/1920-1080.jpg)
+![Laptop Wireframe](https://github.com/bbeckford305/Tic-Tac-Toe-Client/blob/main/Images/1920-1080.jpg)
 
 ### Phone Wireframe
 
