@@ -20,7 +20,6 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#newGameButton').on('click', authGames.onCreateNewGame)
   $('#signoutButton').on('click', authEvents.onSignOut)
-  $('#tictactoeButton').on('click', authGames.onTicTacToeGame)
 })
 
 let player = 'X'

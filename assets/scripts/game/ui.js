@@ -33,9 +33,8 @@ const store = require('./../store')
 
 const onCreateGameSuccess = function (response) {
   store.player = response.player
-  $('#message').text('Player Games')
+  $('#message').text('Player Games Started')
   $('.container').show()
-  $('#tictactoeButton').show()
 }
 
 const onCreateGameFailure = function () {
