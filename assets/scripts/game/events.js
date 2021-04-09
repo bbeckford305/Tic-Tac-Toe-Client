@@ -63,6 +63,8 @@ selectBox.addEventListener('click', function(){
   }
 }
 
+.selectBox()
+
 module.exports = {
   onNewGame,
   onTicTacToeGame,
