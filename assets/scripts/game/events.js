@@ -43,10 +43,29 @@ const onCreateNewGame = function (event) {
     .then(ui.onCreateGameSuccess)
     .catch(ui.onCreateGameFailure)
 }
+
+let player = 'X'
+const onBoxClick = (event) => {
+  const box = $(event.target)
+  box.css('background', 'transparent').text(player)
+  player = player === 'O' ? 'X' : 'O'
+}
+
+$('.box').on('click', onBoxClick)
+
+
+// Do not allow spaces on the board to be selected twice.
+
+selectBox.addEventListener('click', function(){
+
+  if (onBoxClick = true) {
+    $('#message').text('Moved not allowed')
+  }
+}
+
 module.exports = {
   onNewGame,
   onTicTacToeGame,
   // onBoxClick,
   onCreateNewGame
-
 }

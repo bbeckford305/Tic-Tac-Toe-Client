@@ -22,11 +22,11 @@ $(() => {
   $('#signoutButton').on('click', authEvents.onSignOut)
 })
 
-let player = 'X'
-const onBoxClick = (event) => {
-  const box = $(event.target)
-  box.css('background', 'transparent').text(player)
-  player = player === 'O' ? 'X' : 'O'
-}
-
-$('.box').on('click', onBoxClick)
+// let player = 'X'
+// const onBoxClick = (event) => {
+//   const box = $(event.target)
+//   box.css('background', 'transparent').text(player)
+//   player = player === 'O' ? 'X' : 'O'
+// }
+//
+// $('.box').on('click', onBoxClick)
