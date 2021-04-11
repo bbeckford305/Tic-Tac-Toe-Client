@@ -2,6 +2,7 @@
 const getFormFields = require('./../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('.././store')
 
 const onNewGame = function (event) {
   event.preventDefault()
@@ -44,30 +45,38 @@ const onCreateNewGame = function (event) {
     .catch(ui.onCreateGameFailure)
 }
 
-let player = 'X'
-const onBoxClick = (event) => {
-  const box = $(event.target)
-  box.css('background', 'transparent').text(player)
-  player = player === 'O' ? 'X' : 'O'
+const onBoxSelect = function (event) {
+  event.preventDefault()
+  // const form = event.target
+  // const cell = getFormFields(form)
+  const box = store.user.box
+  box.css('background', 'transparent').text()
+  store.user.box = $(event.target).attr('box')
+  //   if (store.user.complete === true && $(event.target).text() === '') {
+  api.selectBox(box)
+    .then(ui.onBoxSelectSuccess)
+    .catch(ui.onBoxSelectFailure)
+//   } else if (($(event.target).text() === '')) {
+//     $('#message').text('Box unavailable')
+//   }
 }
 
-$('.box').on('click', onBoxClick)
-
-
-// Do not allow spaces on the board to be selected twice.
-
-selectBox.addEventListener('click', function(){
-
-  if (onBoxClick = true) {
-    $('#message').text('Moved not allowed')
-  }
-}
-
-.selectBox()
+//
+// // Do not allow spaces on the board to be selected twice.
+//
+// selectBox.addEventListener('click', function(){
+//
+//   if (onBoxClick = true) {
+//     $('#message').text('Moved not allowed')
+//   }
+// }
+//
+// .selectBox()
 
 module.exports = {
   onNewGame,
   onTicTacToeGame,
   // onBoxClick,
+  onBoxSelect,
   onCreateNewGame
 }

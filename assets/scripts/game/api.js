@@ -34,15 +34,15 @@ const createGame = function (gamePlay) {
     }
   })
 }
-const selectBox = function (id) {
+const selectBox = function (box, user) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/games/' + id,
+    url: config.apiUrl + '/games/' + store.user._id,
     data: {
       game: {
         cell: {
-          index: 0,
-          value: 'X'
+          index: box,
+          value: user
         },
         over: false
       }

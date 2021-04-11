@@ -9,6 +9,8 @@ const authGames = require('./game/events')
 // require('./example')
 
 $(() => {
+  $('#gameLogo').hide()
+  $('#slogan').hide()
   $('#change-password').hide()
   $('#passwordChangeForm').hide()
   $('#signoutButton').hide()
@@ -20,6 +22,14 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#newGameButton').on('click', authGames.onCreateNewGame)
   $('#signoutButton').on('click', authEvents.onSignOut)
+  $('#1').on('click', authGames.onBoxSelect)
+  $('#2').on('click', authGames.onBoxSelect)
+  $('#3').on('click', authGames.onBoxSelect)
+  $('#4').on('click', authGames.onBoxSelect)
+  $('#5').on('click', authGames.onBoxSelect)
+  $('#6').on('click', authGames.onBoxSelect)
+  $('#7').on('click', authGames.onBoxSelect)
+  $('#8').on('click', authGames.onBoxSelect)
 })
 
 // let player = 'X'
@@ -27,6 +37,23 @@ $(() => {
 //   const box = $(event.target)
 //   box.css('background', 'transparent').text(player)
 //   player = player === 'O' ? 'X' : 'O'
+// }
+//
+// $('.box').on('click', onBoxClick)
+
+// const player = 'X'
+// // let player2 = 'O'
+// const onBoxClick = (event) => {
+//   const box = $(event.target)
+//   box.css('background', 'transparent').text()
+//
+//   if (player === 'X') {
+//     const player = 'O'
+//     return player
+//   } else if (player === 'O') {
+//     const player = 'X'
+//     return player
+//   }
 // }
 //
 // $('.box').on('click', onBoxClick)

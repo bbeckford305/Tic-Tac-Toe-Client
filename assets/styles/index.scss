@@ -6,11 +6,52 @@ $rastaYellow: rgb(255, 254, 37);
 $black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
 
-h1 {
+body {
+  background-color: $black;
+}
+#entryPage {
   display: flex;
   justify-content: center;
+  height: 50vh;
 }
 
+#signupForm{
+  color: $white;
+}
+
+#sign-up{
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  padding: 30px;
+  border: 3px solid white;
+  margin: 0;
+  text-align: center;
+}
+
+#signinForm{
+  color: $white;
+}
+#signupForm{
+  color: $white;
+}
+
+#gameLogo {
+  display: flex;
+  justify-content: border-right;
+  height: 25vh;
+}
+
+#passwordChangeForm{
+  color: $white;
+}
+
+#message{
+  color: $rastaRed;
+}
+h2{
+  color: $white;
+}
 
 .container {
 height: 100vh;
@@ -54,11 +95,10 @@ justify-content: center;
 align-items: center;
 
 
-//
-// //would effect the letter color
+//would effect the letter color
 color: $black;
-//
-// //make the font larger
+
+//make the font larger
  font-size: 20vh;
 
 //

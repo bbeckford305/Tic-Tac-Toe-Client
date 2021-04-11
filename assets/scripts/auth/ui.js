@@ -21,9 +21,11 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#signupForm').hide()
   $('#signinForm').hide()
+  $('#entryPage').hide()
   $('#passwordChangeForm').show()
   $('#signoutButton').show()
   $('#newGameButton').show()
+  $('#gameLogo').show()
 }
 
 const onSignInFailure = function () {
