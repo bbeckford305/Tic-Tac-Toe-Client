@@ -20,9 +20,9 @@ Play one of the oldest games still played today. You will be given the choice of
 
 ### Laptop Wireframe
 
-![Laptop Wireframe](https://github.com/bbeckford305/Tic-Tac-Toe-Client/blob/main/Images/1920-1080.jpg)
+![Laptop Wireframe](public/Images/1920-1080.jpg)
 
 ### Phone Wireframe
 
 
-![Phone Wireframe](https://github.com/bbeckford305/Tic-Tac-Toe-Client/blob/main/Images/iPhone%2012%20Pro%20Max%20%E2%80%93%201.jpg)
+![Phone Wireframe](public/Images/iPhone-12-Pro-Max.jpg)
