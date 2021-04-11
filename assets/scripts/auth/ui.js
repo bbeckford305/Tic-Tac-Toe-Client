@@ -5,6 +5,9 @@ const store = require('./../store')
 const onSignUpSuccess = function () {
   $('#message').text('Thank You For Registering')
   $('#sign-up').trigger('reset')
+  $('#signinButton2').show()
+  $('#signupForm').hide()
+  $('#sign-up').hide()
 }
 
 const onSignUpFailure = function () {
@@ -47,10 +50,12 @@ const onSignOutSuccess = function () {
   store.user = null
   $('#message').text('You Have Been Signed Out')
   $('#change-password').hide()
-  $('#sign-up').show()
-  $('#sign-in').show()
-  $('#signupForm').show()
-  $('#signinForm').show()
+  $('#entryPage').show()
+  $('#entrySignIn').show()
+  $('#entryMessage').show()
+  $('#entryButton').show()
+  $('#entrySignInButton').show()
+  $('#gameLogo').hide()
   $('#passwordChangeForm').hide()
   $('#signoutButton').hide()
   $('#newGameButton').hide()
@@ -71,4 +76,5 @@ module.exports = {
   onChangePasswordFailure,
   onSignOutSuccess,
   onSignOutFailure
+
 }

@@ -15,24 +15,51 @@ $(() => {
   $('#passwordChangeForm').hide()
   $('#signoutButton').hide()
   $('#newGameButton').hide()
+  $('#signinButton2').hide()
   $('#tictactoeButton').hide()
   $('.container').hide()
+  $('#signupForm').hide()
+  $('#sign-up').hide()
+  $('#signinForm').hide()
+  $('#sign-in').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#newGameButton').on('click', authGames.onCreateNewGame)
   $('#signoutButton').on('click', authEvents.onSignOut)
-  $('#1').on('click', authGames.onBoxSelect)
-  $('#2').on('click', authGames.onBoxSelect)
-  $('#3').on('click', authGames.onBoxSelect)
-  $('#4').on('click', authGames.onBoxSelect)
-  $('#5').on('click', authGames.onBoxSelect)
-  $('#6').on('click', authGames.onBoxSelect)
-  $('#7').on('click', authGames.onBoxSelect)
-  $('#8').on('click', authGames.onBoxSelect)
+  $('.box').on('click', authGames.onBoxSelect)
 })
 
-// let player = 'X'
+const onEntrySignUp = (event) => {
+  $('#entryButton').hide()
+  $('#entryMessage').hide()
+  $('#entrySignInButton').hide()
+  $('#entrySignIn').hide()
+  $('#message').text('Please enter email and password')
+  $('#sign-up').show()
+  $('#signupForm').show()
+}
+
+$('#entryButton').on('click', onEntrySignUp)
+
+const onEntrySignIn = (event) => {
+  $('#entryButton').hide()
+  $('#entryMessage').hide()
+  $('#message').text('Welcome Back')
+  $('#sign-in').show()
+  $('#signinForm').show()
+}
+
+$('#entrySignInButton').on('click', onEntrySignIn)
+
+const onSignInButton2 = (event) => {
+  $('#message').text('Please Sign In To Play')
+  $('#sign-in').show()
+  $('#signinForm').show()
+  $('#signinButton2').hide()
+}
+
+$('#signinButton2').on('click', onSignInButton2)
 // const onBoxClick = (event) => {
 //   const box = $(event.target)
 //   box.css('background', 'transparent').text(player)

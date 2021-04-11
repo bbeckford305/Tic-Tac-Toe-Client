@@ -9,31 +9,80 @@ $white: rgb(255, 255, 255);
 body {
   background-color: $black;
 }
+
+#entrySignIn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $white;
+}
+
+#entrySignInButton {
+  padding: 0;
+  border: none;
+  color: $white;
+  background-color: $black
+}
+
 #entryPage {
-  display: flex;
-  justify-content: center;
   height: 50vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+#entryMessage {
+  text-align: center;
+  height: 50vh;
+  color: $white;
+}
+#entryButton {
+  text-align: center;
+  padding: 0;
+  border: none;
+  height: 5vh;
+  color: $white;
+  animation: blinkingText 2s infinite;
+  background-color: $black
+}
+
+@keyframes blinkingText{
+		25%		{ color: $rastaRed;}
+		50%		{ color: $rastaGreen;}
+		75%		{ color: $rastaYellow;}
+		100%		{ color: $black;}
+
+}
+
+#signinButton2 {
+  position: absolute;
+  top: 50%;
+  width: 10%;
+  text-align: center;
+  font-size: 18px;
 }
 
 #signupForm{
+  text-align: center;
   color: $white;
 }
 
 #sign-up{
-  display: flex;
-  justify-content: center;
-  width: 700px;
-  padding: 30px;
-  border: 3px solid white;
-  margin: 0;
   text-align: center;
+
 }
 
 #signinForm{
+  text-align: center;
   color: $white;
 }
-#signupForm{
-  color: $white;
+
+#sign-in{
+  text-align: center;
+
 }
 
 #gameLogo {
@@ -47,8 +96,11 @@ body {
 }
 
 #message{
+  text-align: center;
   color: $rastaRed;
+
 }
+
 h2{
   color: $white;
 }

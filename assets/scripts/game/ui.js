@@ -40,20 +40,26 @@ const onCreateGameSuccess = function (response) {
 const onCreateGameFailure = function () {
   $('#message').text('Game Create Fail')
 }
+
+// let player = 'X'
 //
-const onBoxSelectSuccess = function (playerMove) {
-  store.user.game = playerMove.game
-  const box = $(event.target)
-  box.css('background', 'transparent').text()
-  let user = 'X'
-  if (user === 'X') {
-    user = 'O'
-  //     return player
-  } else if (user === 'O') {
-    user = 'X'
-  //     return player
-  }
-}
+// const onBoxSelectSuccess = function (playerMove) {
+//   store.user.game = playerMove.game
+//   const box = $(event.target)
+//   box.css('background', 'transparent').text()
+//   // box.css('background', 'transparent')
+//   if (box.text() === 'X') {
+//     box.text(player)
+//     player = player === 'O' ? 'X' : 'O'
+//   // //     return player
+//   } else if (box.text() === 'O' || box.text() === 'X') {
+//     $('#message').text('Select A New Cell')
+//   // // //     return player
+//   // }
+//   }
+// }
+// const boxCell = $(event.target).data('cell-index')
+// const user = (box.text())
 //   if (playerMove === null) {
 //     $('[id=${store.user.cell}]').text('X')
 //   } else {
@@ -129,7 +135,7 @@ module.exports = {
   // occupiedBox,
   // emptyBox,
   onCreateGameSuccess,
-  onCreateGameFailure,
+  onCreateGameFailure
   // onBoxClick
-  onBoxSelectSuccess
+  // onBoxSelectSuccess
 }
