@@ -5,7 +5,7 @@ Play one of the oldest games still played today. You will be given the choice of
 
 ## Game Link
 
-- [Tic Tac Toe Game](https://github.com/bbeckford305/Tic-Tac-Toe-Client)
+- [Tic Tac Toe Game](https://bbeckford305.github.io/Tic-Tac-Toe-Client/)
 
 
 ## Planning
