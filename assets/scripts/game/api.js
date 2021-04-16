@@ -3,26 +3,26 @@
 const config = require('./../config')
 const store = require('./../store')
 
-const newGame = function () {
-  return $.ajax({
-    method: 'GET',
-    url: config.apiUrl + '/games/',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
+// const newGame = function () {
+//   return $.ajax({
+//     method: 'GET',
+//     url: config.apiUrl + '/games/',
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     }
+//   })
+// }
 
-const startGame = function (id) {
-  return $.ajax({
-    method: 'GET',
-    url: config.apiUrl + '/games/' + id,
-    data: {},
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
+// const startGame = function (id) {
+//   return $.ajax({
+//     method: 'GET',
+//     url: config.apiUrl + '/games/' + id,
+//     data: {},
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     }
+//   })
+// }
 
 const createGame = function (gamePlay) {
   return $.ajax({
@@ -34,7 +34,7 @@ const createGame = function (gamePlay) {
     }
   })
 }
-const selectBox = function (boxCell, user) {
+const selectBox = function (boxCell, playerTest) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/games/' + store.game._id,
@@ -42,7 +42,7 @@ const selectBox = function (boxCell, user) {
       game: {
         cell: {
           index: boxCell,
-          value: user
+          value: playerTest
         },
         over: false
       }
@@ -54,8 +54,8 @@ const selectBox = function (boxCell, user) {
 }
 
 module.exports = {
-  newGame,
-  startGame,
+  // newGame,
+  // startGame,
   selectBox,
   createGame
 

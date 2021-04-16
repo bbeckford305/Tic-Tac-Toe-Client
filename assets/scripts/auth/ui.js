@@ -8,6 +8,8 @@ const onSignUpSuccess = function () {
   $('#signinButton2').show()
   $('#signupForm').hide()
   $('#sign-up').hide()
+  $('#sign-in').show()
+  $('#signinForm').show()
 }
 
 const onSignUpFailure = function () {
@@ -25,6 +27,8 @@ const onSignInSuccess = function (response) {
   $('#signupForm').hide()
   $('#signinForm').hide()
   $('#entryPage').hide()
+  $('#entrySignIn').hide()
+  $('#entrySignInButton').hide()
   $('#passwordChangeForm').show()
   $('#signoutButton').show()
   $('#newGameButton').show()

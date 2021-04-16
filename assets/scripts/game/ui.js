@@ -33,13 +33,31 @@ const store = require('./../store')
 
 const onCreateGameSuccess = function (response) {
   store.user = response.user
+  // player = 'X'
   $('#message').text('Player Games Started')
   $('.container').show()
+  $('.box').text('')
+  $('.box').on('click')
 }
 
 const onCreateGameFailure = function () {
   $('#message').text('Game Create Fail')
 }
+
+// const onBoxSelectSuccess = function (response, player) {
+//   store.user = response.user
+//   const box = $(event.target)
+//   box.css('background', 'transparent')
+//   if (box.text() === '') {
+//     box.text(player)
+//     player = player === 'O' ? 'X' : 'O'
+//   } else if (box.text() === 'O' || box.text() === 'X') {
+//     $('#message').text('Please pick a empty cell')
+//   }
+//   $('.box').on('click', onBoxSelectSuccess)
+// }
+// $('#message').text('Player Games Started')
+// $('.container').show()
 
 // let player = 'X'
 //
