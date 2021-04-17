@@ -34,15 +34,15 @@ const createGame = function (gamePlay) {
     }
   })
 }
-const selectBox = function (boxCell, playerTest) {
+const playerMove = function (index, value) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/games/' + store.game._id,
     data: {
       game: {
         cell: {
-          index: boxCell,
-          value: playerTest
+          index: index,
+          value: value
         },
         over: false
       }
@@ -56,7 +56,7 @@ const selectBox = function (boxCell, playerTest) {
 module.exports = {
   // newGame,
   // startGame,
-  selectBox,
-  createGame
+  createGame,
+  playerMove
 
 }
