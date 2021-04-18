@@ -21,6 +21,7 @@ $(() => {
   $('#sign-up').hide()
   $('#signinForm').hide()
   $('#sign-in').hide()
+  $('#newGameButton2').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
@@ -50,6 +51,16 @@ const onEntrySignIn = (event) => {
 }
 
 $('#entrySignInButton').on('click', onEntrySignIn)
+
+// const onPlayAgain = (event) => {
+//   $('#entryButton').hide()
+//   $('#entryMessage').hide()
+//   $('#message').text('Welcome Back')
+//   $('#sign-in').show()
+//   $('#signinForm').show()
+// }
+
+$('#newGameButton2').on('click', authGames.onCreateNewGame)
 
 $('[data-cell-index="0"]').data('click', authGames.onBoxSelect)
 $('[data-cell-index="1"]').data('click', authGames.onBoxSelect)

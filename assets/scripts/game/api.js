@@ -34,7 +34,7 @@ const createGame = function (gamePlay) {
     }
   })
 }
-const playerMove = function (index, value) {
+const playerMove = function (index, value, gameOver) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/games/' + store.game._id,
@@ -44,7 +44,7 @@ const playerMove = function (index, value) {
           index: index,
           value: value
         },
-        over: false
+        over: gameOver
       }
     },
     headers: {
