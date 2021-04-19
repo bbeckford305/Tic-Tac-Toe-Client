@@ -165,3 +165,54 @@ background-color: $black;
 // user-select: none;
 }
 }
+
+// nav-color: $black;
+// nav-drop-color: $rastaGreen;
+// line-height: 2em;
+// nav-padding: .75em;
+// a-hover: $rastaRed;
+//
+// .userDropDown {
+//   background: $black;
+//   @include subtle-gradient(lighten($black, 3%), $black);
+//   height: line-height;
+//   border-top: 1px solid lighten($black, 15%);
+//   border-bottom: 1px solid darken($black, 20%);
+//   @include shadow(2px, 2px, 0px, rgba(0,0,0,.25));
+//   &:a {
+//     color: $white;
+//     padding-left: nav-padding;
+//     padding-right: nav-padding;
+//     display: block;
+//     border-right: 1px solid darken($black, 5%);
+//     text-decoration: none;
+//     &:hover{
+//       color: $a-hover;
+//     }
+//   }
+//   ul{
+//     @include reset;
+//     list-style: none;
+//     li{
+//       float: left;
+//       position: relative;
+//       ul{
+//         display: none;
+//         position: absolute;
+//         overflow: auto;
+//         width: 17em;
+//         background-color: $rastaGreen;
+//         border-bottom: 1px solid darken($rastaGreen, 20%);
+//         border-left: 1px solid darken($rastaGreen, 20%);
+//         border-right: 1px solid darken($rastaGreen, 20%);
+//         @include shadow(2px, 2px, 0px, rgba(0,0,0,.25));
+//         @include subtle-gradient(lighten($rastaGreen, 3%), $rastaGreen);
+//         li{
+//           float: none;
+//           border-bottom: 1px solid darken($rastaGreen, 2%);
+//         }
+//       }
+//       &:hover ul{ display: block; }
+//     }
+//   }
+// }

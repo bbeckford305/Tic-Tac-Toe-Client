@@ -29,7 +29,7 @@ const onPlayerTie = function (response) {
 const onNewGameSuccess = function (response) {
   store.game = response.game
   store.game.over = true
-  $('#message').text('Lets Try Again')
+  $('#message').text('Play Again To Reveal Image')
   $('.container').show()
   $('.box').trigger('reset')
   $('.box').empty()

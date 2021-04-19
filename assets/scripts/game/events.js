@@ -22,6 +22,7 @@ const onBoxSelect = function (event) {
   const gameOver = store.game.over
   if (box.text() === '') {
     box.text(playerTurns)
+    box.css('background', 'transparent').text()
     store.game.cells[index] = playerTurns
     playerTurns = playerTurns === 'X' ? 'O' : 'X'
     $('#message').text(`Currently, ${playerTurns} is playing.`)

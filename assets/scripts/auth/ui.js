@@ -33,6 +33,7 @@ const onSignInSuccess = function (response) {
   $('#signoutButton').show()
   $('#newGameButton').show()
   $('#gameLogo').show()
+  $('.userDropDown').show()
 }
 
 const onSignInFailure = function () {

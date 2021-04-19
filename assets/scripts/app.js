@@ -29,6 +29,7 @@ $(() => {
   $('#signoutButton').on('click', authEvents.onSignOut)
   $('.box').on('click', authGames.onBoxSelect)
   $('#newGameButton2').on('click', authGames.onPlayAgain)
+  $('.userDropDown').hide()
 })
 
 const onEntrySignUp = (event) => {
@@ -53,18 +54,24 @@ const onEntrySignIn = (event) => {
 
 $('#entrySignInButton').on('click', onEntrySignIn)
 
-// const onPlayAgain = (event) => {
-//   $('#entryButton').hide()
-//   $('#entryMessage').hide()
-//   $('#message').text('Welcome Back')
-//   $('#sign-in').show()
-//   $('#signinForm').show()
-// }
-//
-// const onPlayAgain = (event) => {
-//   $('#newGameButton2').on('click', authGames.onCreateNewGame)
-//   $('.box').trigger('reset')
-// }
+const passwordButton = (event) => {
+  $('#passwordChangeForm').show()
+  $('#change-password').show()
+}
+
+$('#changePasswordButton').on('click', passwordButton)
+
+const changeSong = (event) => {
+
+}
+
+$('#changeMusicButton').on('click', changeSong)
+
+const userInfo = (event) => {
+
+}
+
+$('#userInfoButton').on('click', userInfo)
 
 $('[data-cell-index="0"]').data('click', authGames.onBoxSelect)
 $('[data-cell-index="1"]').data('click', authGames.onBoxSelect)
