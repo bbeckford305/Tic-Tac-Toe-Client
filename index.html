@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="public/Images/flag.jpg" type="image/x-icon">
+      <!-- Do not add `link` tags-->
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <audio autoplay loop>
+        <source src="public/audio/BOB-MARLEY-THREE-LITTLE-BIRDS.mp3" type="audio/mpeg">
+      </audio>
+
+      <h1 id='gameLogo'><img src="public/Images/Lion-Logo-2.jpg" alt="Lion logo"> </h1>
+      <h2 id='slogan'>The ancient game of X's and O's</h2>
+
+      <!-- Entry Page -->
+
+      <img id='entryPage' src="public/Images/Lion-Logo-2.jpg" alt="Lion logo">
+
+      <h1 id='entryMessage'>Please &nbsp;<button id='entryButton'>Sign Up</button>&nbsp; To Play </h1>
+      <h6 id='entrySignIn'>Returning User &nbsp;<button id='entrySignInButton'>Sign-In</button></h6>
+
+
+
+      <p id="message"></p>
+      <!--Sign Up Button-->
+      <p id="signupForm">Register To Play</p>
+      <form id="sign-up">
+        <input name="credentials[email]" type="email" placeholder="email" required>
+        <input name="credentials[password]" type="password" placeholder="password" required>
+        <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation" required>
+        <input type="submit" value="Sign Up"/>
+      </form>
+
+      <!-- Sign In Button-->
+      <p id="signinForm">Login To Play</p>
+      <form id="sign-in">
+        <input name="credentials[email]" type="email" placeholder="email" required>
+        <input name="credentials[password]" type="password" placeholder="password" required>
+        <input type="submit" value="Sign In"/>
+      </form>
+
+      <!--Change Password Button-->
+      <p id="passwordChangeForm">Change Your Password</p>
+      <form id="change-password">
+        <input name="passwords[old]" type="password" placeholder="current password" required>
+        <input name="passwords[new]" type="password" placeholder="new password" required>
+        <input type="submit" value="Change Password"/>
+      </form>
+
+      <!--Sign out Button-->
+      <button id="signoutButton">Sign Out</button>
+
+      <!--New Game Button-->
+      <button id="newGameButton">New Game</button>
+
+      <!--New Game Button 2-->
+      <button id="newGameButton2">Play Again</button>
+
+      <!--Game Board-->
+      <section class='container'>
+
+        <div id='gameboard' class='row h-100 board'>
+
+            <div id='1' class='col-4 box' data-cell-index='0'></div>
+            <div id='2' class='col-4 box' data-cell-index='1'></div>
+            <div id='3' class='col-4 box' data-cell-index='2'></div>
+
+
+
+            <div id='4' class='col-4 box' data-cell-index='3'></div>
+            <div id='5' class='col-4 box' data-cell-index='4'></div>
+            <div id='6' class='col-4 box' data-cell-index='5'></div>
+
+
+
+            <div id='7' class='col-4 box' data-cell-index='6'></div>
+            <div id='8' class='col-4 box' data-cell-index='7'></div>
+            <div id='9' class='col-4 box' data-cell-index='8'></div>
+
+
+      </div>
+
+    </section>
+
+
+  </body>
+</html>

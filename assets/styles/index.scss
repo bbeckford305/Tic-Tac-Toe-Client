@@ -1,0 +1,167 @@
+@import '~bootstrap/scss/bootstrap';
+
+$rastaRed: rgb(255, 0, 0);
+$rastaGreen: rgb(0, 110, 0);
+$rastaYellow: rgb(255, 254, 37);
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+body {
+  background-color: $black;
+}
+
+#entrySignIn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $white;
+}
+
+#entrySignInButton {
+  padding: 0;
+  border: none;
+  color: $white;
+  background-color: $black
+}
+
+#entryPage {
+  height: 50vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+
+}
+#entryMessage {
+  text-align: center;
+  height: 50vh;
+  color: $white;
+}
+#entryButton {
+  text-align: center;
+  padding: 0;
+  border: none;
+  height: 5vh;
+  color: $white;
+  animation: blinkingText 2s infinite;
+  background-color: $black
+}
+
+@keyframes blinkingText{
+		25%		{ color: $rastaRed;}
+		50%		{ color: $rastaGreen;}
+		75%		{ color: $rastaYellow;}
+		100%		{ color: $black;}
+
+}
+
+#signinButton2 {
+  position: absolute;
+  top: 50%;
+  width: 10%;
+  text-align: center;
+  font-size: 18px;
+}
+
+#signupForm{
+  text-align: center;
+  color: $white;
+}
+
+#sign-up{
+  text-align: center;
+
+}
+
+#signinForm{
+  text-align: center;
+  color: $white;
+}
+
+#sign-in{
+  text-align: center;
+
+}
+
+#gameLogo {
+  display: flex;
+  justify-content: border-right;
+  height: 25vh;
+}
+
+#passwordChangeForm{
+  color: $white;
+}
+
+#message{
+  text-align: center;
+  color: $rastaRed;
+
+}
+
+h2{
+  color: $white;
+}
+
+.container {
+height: 100vh;
+}
+
+.board {
+margin: auto;
+max-height: calc(100vh -75px);
+max-width: calc(100vh -75px;
+background: url(public/Images/rasta-lion.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+.box {
+border-right: 1px solid $black;
+border-bottom: 1px solid $black;
+&:nth-child(3n) {
+border-right: 0;
+background-color: $rastaRed;
+text-shadow: 3px 3px rgba(0, 110, 0, 1);
+}
+
+&:nth-child(3n+2) {
+background-color: $rastaYellow;
+text-shadow: 3px 3px rgba(255, 0, 0, 1);
+  }
+
+&:nth-child(3n+1) {
+background-color: $rastaGreen;
+text-shadow: 3px 3px rgba(255, 254, 37, 1);
+}
+
+&:nth-last-child(-1n + 3) {
+border-bottom: 0;
+}
+min-height: calc(100/3);
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+//would effect the letter color
+color: $black;
+
+//make the font larger
+ font-size: 20vh;
+
+//
+// //give text a shadow. the first 2 effect to the right. the second 2 effect below. rgba is the shadow color( the .25 determine the transparency)
+//text-shadow: 2px 2px rgba(0, 0, 0, 1);
+
+
+// //changes the color of the box when you hover over it
+&:hover {
+// //nth-child(3n+1): background-color: $rastaYellow;
+background-color: $black;
+// //
+// // //Would make our text not be selectable
+// user-select: none;
+}
+}
