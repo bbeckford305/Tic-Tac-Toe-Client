@@ -28,6 +28,7 @@ $(() => {
   $('#newGameButton').on('click', authGames.onCreateNewGame)
   $('#signoutButton').on('click', authEvents.onSignOut)
   $('.box').on('click', authGames.onBoxSelect)
+  $('#newGameButton2').on('click', authGames.onPlayAgain)
 })
 
 const onEntrySignUp = (event) => {
@@ -59,8 +60,11 @@ $('#entrySignInButton').on('click', onEntrySignIn)
 //   $('#sign-in').show()
 //   $('#signinForm').show()
 // }
-
-$('#newGameButton2').on('click', authGames.onCreateNewGame)
+//
+// const onPlayAgain = (event) => {
+//   $('#newGameButton2').on('click', authGames.onCreateNewGame)
+//   $('.box').trigger('reset')
+// }
 
 $('[data-cell-index="0"]').data('click', authGames.onBoxSelect)
 $('[data-cell-index="1"]').data('click', authGames.onBoxSelect)

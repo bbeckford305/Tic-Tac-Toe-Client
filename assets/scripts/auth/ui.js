@@ -64,7 +64,9 @@ const onSignOutSuccess = function () {
   $('#signoutButton').hide()
   $('#newGameButton').hide()
   $('.container').hide()
-  $('#tictactoeButton').hide()
+  $('#newGameButton2').hide()
+  $('.box').trigger('reset')
+  $('.box').empty()
 }
 
 const onSignOutFailure = function () {

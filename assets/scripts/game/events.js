@@ -4,7 +4,7 @@ const api = require('./api')
 const ui = require('./ui')
 const store = require('.././store')
 
-let playerTurns = 2
+let playerTurns = 'X'
 
 const onCreateNewGame = function (event) {
   event.preventDefault()
@@ -16,33 +16,65 @@ const onCreateNewGame = function (event) {
 }
 
 const onBoxSelect = function (event) {
-  event.preventDefault()
+  if (gameWin()) return
   const box = $(event.target)
   const index = $(event.target).attr('data-cell-index')
   const gameOver = store.game.over
   if (box.text() === '') {
-    if (playerTurns % 2 === 0) {
-      box.css('background', 'transparent').text('X')
-      $('#message').text('It is now O turn')
-      playerTurns++
-    } else {
-      box.css('background', 'transparent').text('O')
-      $('#message').text('It is now X turn')
-      playerTurns++
-    }
+    box.text(playerTurns)
+    store.game.cells[index] = playerTurns
+    playerTurns = playerTurns === 'X' ? 'O' : 'X'
+    $('#message').text(`Currently, ${playerTurns} is playing.`)
   }
   const value = $(event.target).text()
-  api.playerMove(index, value, gameOver)
+  api.playerMove(index, value, gameOver, gameWin())
     .then(ui.onMoveSuccess)
     .catch(ui.onMoveError)
 }
 
-//   api.playerMove(index)
-//     .then(ui.onMoveSuccess)
-//     .catch(ui.onMoveError)
-// }
-module.exports = {
+const gameWin = function () {
+  if (store.game.cells[0] && store.game.cells[1] === store.game.cells[0] && store.game.cells[2] === store.game.cells[0]) {
+    ui.onPlayerWin()
+    return true
+  } else if (store.game.cells[3] && store.game.cells[4] === store.game.cells[3] && store.game.cells[5] === store.game.cells[3]) {
+    ui.onPlayerWin()
+    return true
+  } else if (store.game.cells[6] && store.game.cells[7] === store.game.cells[6] && store.game.cells[8] === store.game.cells[6]) {
+    ui.onPlayerWin()
+    return true
+  } else if (store.game.cells[0] && store.game.cells[3] === store.game.cells[0] && store.game.cells[6] === store.game.cells[0]) {
+    ui.onPlayerWin()
+    return true
+  } else if (store.game.cells[1] && store.game.cells[4] === store.game.cells[1] && store.game.cells[7] === store.game.cells[1]) {
+    ui.onPlayerWin()
+    return true
+  } else if (store.game.cells[2] && store.game.cells[5] === store.game.cells[2] && store.game.cells[8] === store.game.cells[2]) {
+    ui.onPlayerWin()
+    return true
+  } else if (store.game.cells[0] && store.game.cells[4] === store.game.cells[0] && store.game.cells[8] === store.game.cells[0]) {
+    ui.onPlayerWin()
+    return true
+  } else if (store.game.cells[2] && store.game.cells[4] === store.game.cells[2] && store.game.cells[6] === store.game.cells[2]) {
+    ui.onPlayerWin()
+    return true
+  } else if (store.game.cells[0] && store.game.cells[1] && store.game.cells[2] && store.game.cells[3] && store.game.cells[4] && store.game.cells[5] && store.game.cells[6] && store.game.cells[7] && store.game.cells[8]) {
+    ui.onPlayerTie()
+  } else {
+    return false
+  }
+}
 
+const onPlayAgain = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const gamePlay = getFormFields(form)
+  api.createGameAgain(gamePlay)
+    .then(ui.onNewGameSuccess)
+    .catch(ui.onNewGameFailure)
+}
+module.exports = {
   onBoxSelect,
-  onCreateNewGame
+  onCreateNewGame,
+  gameWin,
+  onPlayAgain
 }

@@ -52,11 +52,20 @@ const playerMove = function (index, value, gameOver) {
     }
   })
 }
-
+const createGameAgain = function (gamePlay) {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/games/',
+    data: gamePlay,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 module.exports = {
-  // newGame,
-  // startGame,
+
   createGame,
-  playerMove
+  playerMove,
+  createGameAgain
 
 }
